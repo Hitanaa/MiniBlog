@@ -1,0 +1,510 @@
+.albert-sans {
+    font-family: "Albert Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.albert-sans {
+    font-family: "Albert Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Albert Sans", sans-serif;
+    font-weight: 700;
+}
+
+body {
+    background-color: #9E2B25;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+
+}
+
+.logo {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    z-index: 10;
+}
+
+/* NAV BAR */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background-color: #EAE0D5;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 200px;
+    position: fixed;
+    right: 0;
+    top: 32%;
+    bottom: 0;
+    height: 300px;
+    width: 85px;
+}
+
+img {
+    width: 40px;
+    border: none;
+    display: block;
+}
+
+.sidebar button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    outline: none;
+}
+
+
+/* CONTAINER BILLETS */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 0 20px 50px;
+    gap: 25px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+
+.container-profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 80px 0 20px 400px;
+    gap: 25px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* BILLETS */
+.post {
+    background-color: #EAE0D5;
+    border-radius: 15px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 350px;
+    height: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 150px;
+}
+.comments-section {
+    display: none; /* Hide comments section initially */
+ 
+}
+.post-view-more {
+    background-color: #EAE0D5;
+    border-radius: 15px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 850px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 150px;
+}
+
+.post-profile {
+    background-color: #EAE0D5;
+    border-radius: 15px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 10px;
+}
+
+
+.inner-border {
+    border: 1px solid #9E2B25;
+    border-radius: 10px;
+    /* padding: 5px; */
+    background-color: #EAE0D5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 86%;
+    box-sizing: border-box;
+}
+.postpic{
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+ 
+}
+.postviewpic{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-size: 100% 100;
+    width: 100%;
+    border-radius: 10px;
+}
+.inner-border-profile {
+    border: 1px solid #9E2B25;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #EAE0D5;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.view-more {
+    background-color: #9E2B25;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease, border 0.3s ease;
+}
+
+.view-more:hover {
+    background-color: #EAE0D5;
+    border: 2px solid #9E2B25;
+    color: #9E2B25;
+    padding: 6px 14px;
+}
+
+
+.post-date {
+    color: #9E2B25;
+    font-size: 14px;
+    position: absolute;
+    bottom: 14px;
+    right: 20px;
+}
+
+h1 {
+    font-family: "Albert Sans", sans-serif;
+    font-weight: 500;
+    padding-top: 50px;
+    color: #9E2B25;
+    text-align: center;
+    font-size: 3.4rem;
+}
+
+p {
+    font-family: "Albert Sans", sans-serif;
+    font-weight: 500;
+    padding-top: 15px;
+    color: #9E2B25;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+p a {
+    color: #9E2B25;
+}
+
+/* Style pour chaque groupe de formulaire */
+.form-group {
+    display: flex;
+    flex-direction: column; /* Colonne pour empiler les éléments */
+    margin-bottom: 30px;
+    align-items: center; /* Aligne le contenu à gauche */
+}
+
+/* Style pour les labels */
+label {
+    font-family: "Albert Sans", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 5px;
+    color: #9E2B25;
+    text-align: left; /* Aligne le texte à gauche */
+    margin-left: 110px;
+    width: 100%; /* Prend toute la largeur du conteneur */
+}
+
+
+input {
+    width: 80%;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #9E2B25;
+    border-radius: 5px;
+    background-color: #EAE0D5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.connexion {
+    background-color: #9E2B25;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 25%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.connexion:hover {
+    background-color: #EAE0D5;
+    color: #9E2B25;
+}
+
+.inscription {
+    background-color: #9E2B25;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 20%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.inscription:hover {
+    background-color: #EAE0D5;
+    color: #9E2B25;
+}
+
+.deconnexion {
+    background-color: #9E2B25;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 28%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.deconnexion:hover {
+    background-color: #EAE0D5;
+    color: #9E2B25;
+}
+
+.button-container {
+    display: flex; /* Utilise flexbox pour centrer le bouton */
+    justify-content: center; /* Centre le bouton horizontalement */
+    padding-top: 0px;
+}
+
+.profile-picture-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: none;
+    background-color: #9E2B25;
+    margin: 30px auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative; /* Permet à l'icône de s'aligner correctement */
+}
+
+.profile-picture-circle img#profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#fileInput {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 210px;
+    right: 170px;  /* Ajustez pour le placement désiré */
+    width: 35px;
+    height: 35px;
+    background-color: #EAE0D5;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+
+
+
+::-webkit-scrollbar {
+
+    width: 11px;
+}
+
+
+
+::-webkit-scrollbar-track {
+
+    background-color: #9E2B25;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background-color: #EAE0D5;
+
+    border-radius: 6px;
+}
+
+  /* Styling for the comment section */
+  .comment-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+  .comment-section1 {
+    width: 100%;
+    max-width: 800px;
+    margin: 0px auto;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the textarea */
+.comment-textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    resize: vertical; /* Allows resizing only vertically */
+    min-height: 100px;
+    transition: border-color 0.3s;
+}
+
+/* Add focus effect */
+.comment-textarea:focus {
+    outline: none;
+    border-color: #9E2B29;
+}
+
+/* Styling for the submit button */
+.submit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #9E2B25;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.submit-btn:hover {
+    background-color: #9E2B29;
+}
+
+
+
+.comment {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comment-content {
+    flex-grow: 1;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.username {
+    font-weight: bold;
+    color: #333;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: #777;
+}
+
+.comment-text {
+    margin-top: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.comment-actions a {
+    text-decoration: none;
+    color: #65676b;
+    cursor: pointer;
+}
+
+.comment-actions a:hover {
+    text-decoration: underline;
+}
+    
